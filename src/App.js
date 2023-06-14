@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const username = getRequestParameter('username');
+  const password = getRequestParameter('password');
+  const query = `SELECT * FROM users WHERE username = '${username}' AND password = '${password}'`;
   return (
     <div className="App">
       <header className="App-header">
